@@ -1,5 +1,6 @@
 from flask import Flask,render_template
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from forms import getText
 
 def sentiment_score(text):
     analyzer = SentimentIntensityAnalyzer()
@@ -17,7 +18,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def main_page():
-    return render_template("mainpage.html")
+    return render_template("mainpage.html",form=getText)
 
 if __name__ == "__main__":
     app.run(debug=True)
