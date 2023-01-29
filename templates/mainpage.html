@@ -4,6 +4,12 @@
     <title>Main Page</title>
 </head>
 <body>
-    <h1>Main Page</h1>
+    <form method="POST" onSubmit = 'get_score();' class='form'>
+        <input name="text">
+        <input type="submit" onclick = 'this.form.submit();'>
+    </form>
+    <br>
+    <br>
+    <p id='demo'>{{ variable }} </p> 
 </body>
 </html>
